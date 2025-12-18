@@ -1,69 +1,65 @@
-import styles from "./Experience.module.css";
+import styles from "./Education.module.css";
+import { LocationIcon } from "./icons";
 
-type Experience = {
-  company: string;
-  role: string;
-  meta: string;
-  highlights: string[];
-  tags: string[];
+type EducationItem = {
+  institution: string;
+  degree: string;
+  location: string;
+  period: string;
+  details?: string[];
 };
 
-const experiences: Experience[] = [
+const education: EducationItem[] = [
   {
-    company: "Manulife",
-    role: "Full-Stack Software Engineer",
-    meta: "Canada · Dec 2022 – Present",
-    highlights: [
-      "Production backend APIs",
-      "Reusable React UI components",
-      "Accessibility & maintainability",
-    ],
-    tags: ["React", "TypeScript", "Node", "Cloud"],
+    institution: "Univerity of Windsor",
+    degree: "Masters in Applied Computing",
+    location: "Windsor, Canada",
+    period: "Jan 2020 – Aug 2021",
   },
   {
-    company: "Validere Technologies",
-    role: "Software Engineer",
-    meta: "Canada · Nov 2021 – Oct 2022",
-    highlights: [
-      "High-performance backend systems",
-      "Data-driven applications",
-      "Reliability & observability",
-    ],
-    tags: ["Backend", "Java", "Distributed Systems"],
+    institution: "Dharmsinh Desai University",
+    degree: "Bachelors in Computer Science",
+    location: "India",
+    period: "July 2013 – April 2017",
+    /*details: [
+      "Focus on software engineering, distributed systems, and applied AI",
+      "Hands-on projects in full-stack development and system design",
+    ],*/
   },
 ];
 
-export default function Experience() {
+export default function Education() {
   return (
-    <section className="section" id="experience">
+    <section className="section" id="education">
       <div className="container">
-        <h2 className="sectionTitle">Experience</h2>
+        {/*<h2 className="sectionTitle">Education</h2>*/}
 
-        <div className={styles.grid}>
-          {experiences.map((exp) => (
-            <article key={exp.company} className={styles.card}>
-              <header className={styles.header}>
+        <div className={styles.list}>
+          {education.map((item) => (
+            <div key={item.institution} className={styles.card}>
+              <div className={styles.header}>
                 <div>
-                  <h3 className={styles.company}>{exp.company}</h3>
-                  <p className={styles.role}>{exp.role}</p>
+                  <h3 className={styles.institution}>{item.institution}</h3>
+                  <p className={styles.degree}>{item.degree}</p>
                 </div>
-                <span className={styles.meta}>{exp.meta}</span>
-              </header>
 
-              <ul className={styles.highlights}>
-                {exp.highlights.map((h) => (
-                  <li key={h}>{h}</li>
-                ))}
-              </ul>
-
-              <div className={styles.tags}>
-                {exp.tags.map((tag) => (
-                  <span key={tag} className={styles.tag}>
-                    {tag}
+                <div className={styles.meta}>
+                  <span className={styles.location}>
+                    <LocationIcon size={14} />
+                    {item.location}
                   </span>
-                ))}
+                  <span>{item.period}</span>
+                </div>
               </div>
-            </article>
+
+              {item.details && (
+                <ul className={styles.details}>
+                  {item.details.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
           ))}
         </div>
       </div>

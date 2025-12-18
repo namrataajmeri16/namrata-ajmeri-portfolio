@@ -25,7 +25,7 @@ export default function App() {
           <Container>
             <div className="heroInner">
               <h1 className="heroTitle">
-                {person.name}
+                Hello I'm {person.name}
                 {/*<span className="accentDot">.</span>*/}
               </h1>
               <span className={styles.location}>

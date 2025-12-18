@@ -16,7 +16,7 @@ export const content = {
     locationLine: "Toronto, ON • Full-Stack Engineer",
     headline: "Full-stack software engineer focused on reliable backend systems and clean, reusable UI.",
     summary:
-      "I build production-grade web applications with strong engineering fundamentals—performance, observability, maintainability—and I’m actively sharpening my UI component craft using React + TypeScript.",
+      "I build production-grade web applications with strong engineering fundamentals—performance, observability, maintainability—and I’m proficient in UI component craft using React + JavaScript/TypeScript.",
     primaryRole: "Full-Stack • Backend-leaning",
     techFocus: "React + JavaScript/TypeScript • Node/Java/Python • Cloud  • Agentic AI",
   },

@@ -13,7 +13,7 @@
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 24px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
@@ -21,7 +21,7 @@
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow);
 }
 
 .header {

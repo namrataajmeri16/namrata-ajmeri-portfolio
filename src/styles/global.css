@@ -38,9 +38,9 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
-    "Apple Color Emoji", "Segoe UI Emoji";
-    /*font-family: Roboto, Helvetica, Arial, sans-serif;*/
+  /*font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";*/
+    font-family: Roboto, Helvetica, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.55;
@@ -149,7 +149,7 @@ a:focus-visible, button:focus-visible {
   background: linear-gradient(
     180deg,
     rgba(79, 143, 251, 0.07),
-    rgba(79, 143, 251, 0.00) 55%
+    rgba(55, 114, 216, 0) 55%
   );
 }
 :root[data-theme="dark"] .hero {
@@ -177,10 +177,13 @@ a:focus-visible, button:focus-visible {
   line-height: 1.08;
 } */
 .heroTitle {
+    color: #25477B;
   letter-spacing: -0.03em;
   margin: 0px;
+  font-size: 3em;
 }
 html {
+    font-size: 18px;
   scroll-behavior: smooth;
 }
 
@@ -248,12 +251,13 @@ html {
 }
 
 .sectionHeader {
+    color: #25477B;
   margin-bottom: 16px;
 }
 
 .sectionTitle {
   margin: 0;
-  font-size: 22px;
+  font-size: 1.5em;
   letter-spacing: -0.015em;
 }
 
@@ -470,13 +474,15 @@ html {
 /* ---------- Footer ---------- */
 .footer {
   padding: 26px 0 40px;
+  background-color: black;
+  color: #ffffff;
 }
 .footerInner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  border-top: 1px solid var(--border);
+  /*border-top: 1px solid var(--border);*/
   padding-top: 16px;
 }
 .footerTop {
@@ -486,7 +492,7 @@ html {
   border-radius: 10px;
 }
 .footerTop:hover {
-  color: var(--text);
+  color: #ffffff;
   background: rgba(79, 143, 251, 0.10);
 }
 
