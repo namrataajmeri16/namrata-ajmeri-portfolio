@@ -13,12 +13,11 @@ export type Project = {
 export const content = {
   person: {
     name: "Namrata Ajmeri",
-    locationLine: "Toronto, ON • Full-Stack Engineer",
+    locationLine: "Toronto, ON",
     headline: "Full-stack software engineer focused on reliable backend systems, reusable UI and AI enhanced user experience",
-    summary:
-      "I build production-grade web applications with strong engineering fundamentals—performance, observability, maintainability—and I’m proficient in UI component craft using React + JavaScript/TypeScript. In addition to that I'm actiely integrating AI-powered features into modern web application ",
+    summary:" I build end-to-end production-grade web applications with strong engineering fundamentals - scalability, maintainability - I'm proficient in UI component craft using React, TypeScript with a growing focus on integrating AI-powered features into real-world products.",
     primaryRole: "Full-Stack • Backend-leaning",
-    techFocus: "React + JavaScript/TypeScript • Node/Java/Python • Cloud  • Agentic AI",
+    techFocus: "React + JavaScript/TypeScript • Node/Java/Python/Ruby on Rails • Cloud  • Agentic AI",
   },
 
   about: {
@@ -59,17 +58,17 @@ export const content = {
   projects: {
     items: [
       {
-        title: "Activity feed dashboard",
+        title: "Claims activity feed dashboard",
         description:
-          "A production-style app showcasing secure APIs, structured logging, and a clean UI for status-driven workflows.",
+          "A scalable activity feed dashboard with cursor-based pagination, redis caching and async processing, designed for high-volume event streams",
         highlights: [
-          "Built a scalable activity feed dashboard enabling efficient browsing of large event streams",
+          "Built a scalable activity feed dashboard using React and Node.js backend enabling efficient browsing of large event streams",
           "Implemented multi-layer caching with TanStack query (client) and redis (server) to reduce database load and improve feed response times",
           "Designed scalability hooks using BullMQ and Redis to support asynchronous event processing, fan-out and future horizintal scaling",
         ],
-        tags: ["React", "Node.js", "SQL", "React", "Observability"],
+        tags: ["React", "Node.js", "Redis", "BullMQ", "Typescript", "Express"],
         links: {
-          repo: "https://github.com/your-username/claims-app",
+          repo: "https://github.com/namrataajmeri16/activity-feed/tree/master",
         },
       },
       {

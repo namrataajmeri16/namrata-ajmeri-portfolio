@@ -1,11 +1,14 @@
 import type { Project } from "../data/content";
-//import Button from "./Button";
+import Button from "./Button";
+import { ExternalLinkIcon } from "./icons";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="card projectCard">
       <div className="projectTop">
-        <h3 className="cardTitle">{project.title}</h3>
+        <h3 className="cardTitle">{project.title} {project.links.repo ? (
+            <ExternalLinkIcon />
+          ) : null}</h3>  
         <p className="muted">{project.description}</p>
       </div>
 
@@ -23,15 +26,15 @@ export default function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      {/*<div className="projectLinks">
-        {project.links.live ? (
+      <div className="projectLinks">
+        {/*project.links.live ? (
           <Button href={project.links.live} variant="primary" newTab>
             Live
           </Button>
-        ) : null}
+        ) : null*/}
         {project.links.repo ? (
           <Button href={project.links.repo} variant="secondary" newTab>
-            Repo
+            Github Repo <ExternalLinkIcon />
           </Button>
         ) : null}
         {project.links.caseStudy ? (
@@ -39,7 +42,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             Case Study
           </Button>
         ) : null} 
-      </div>*/}
+      </div>
     </article>
   );
 }

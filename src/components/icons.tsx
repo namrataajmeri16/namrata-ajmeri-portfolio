@@ -46,6 +46,56 @@ export function GitHubIcon() {
   );
 }
 
+export function ExternalLinkIcon({
+  size = 16,
+  className,
+}: {
+  size?: number;
+  className?: string;
+}) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={className}
+    >
+      {/* Box */}
+      <path
+        d="M14 3h7v7"
+        fill="none"
+        stroke="var(--blue-500)"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      {/* Arrow */}
+      <path
+        d="M21 3L10 14"
+        fill="none"
+        stroke="var(--blue-500)"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      {/* Window */}
+      <rect
+        x="3"
+        y="7"
+        width="14"
+        height="14"
+        rx="2"
+        fill="none"
+        stroke="var(--blue-300)"
+        strokeWidth="1.6"
+      />
+    </svg>
+  );
+}
+
 export function LocationIcon({
   size = 16,
   className,
@@ -77,4 +127,5 @@ export function LocationIcon({
     </svg>
   );
 }
+
 
